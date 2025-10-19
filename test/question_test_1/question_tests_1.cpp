@@ -1,12 +1,32 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-#include "catch.hpp"
-#include "question1.h"
+#include <iostream>
+#include <cassert>
+#include <string>
+#include "../../src/question_1/question_1.h"
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
+using namespace std;
 
-TEST_CASE("test")
+int main()
 {
-	REQUIRE(test_config() == true);
+    cout << "Running Fibonacci sequence tests..." << endl;
+
+    // Test 1
+    assert(get_fib_sequence(5) == "0 1 1 2 3 5");
+    cout << "Test 1 passed." << endl;
+
+    // Test 2
+    assert(get_fib_sequence(7) == "0 1 1 2 3 5 8");
+    cout << "Test 2 passed." << endl;
+
+    // Test 3
+    assert(get_fib_sequence(10) == "0 1 1 2 3 5 8 13 21 34 55");
+    cout << "Test 3 passed." << endl;
+
+    // Test 4
+    assert(get_fib_sequence(12) == "0 1 1 2 3 5 8 13 21 34 55 89 144");
+    cout << "Test 4 passed." << endl;
+
+    cout << "All Fibonacci tests passed successfully!" << endl;
+
+    return 0;
 }
+
