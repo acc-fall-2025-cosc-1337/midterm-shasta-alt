@@ -1,12 +1,14 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
-#include "catch.hpp"
+#include <iostream>
 #include "question3.h"
+using namespace std;
 
-TEST_CASE("Verify Test Configuration", "verification") {
-	REQUIRE(true == true);
-}
-
-TEST_CASE("test")
+int main()
 {
-	REQUIRE(test_config() == true);
+    cout << "Testing find_gcd(15, 25): " << find_gcd(15, 25) << " (Expected: 5)\n";
+    cout << "Testing find_gcd(16, 32): " << find_gcd(16, 32) << " (Expected: 16)\n";
+    cout << "Testing find_gcd(159, 309): " << find_gcd(159, 309) << " (Expected: 3)\n";
+    cout << "Testing find_gcd(5, 7): " << find_gcd(5, 7) << " (Expected: -1)\n";
+
+    return 0;
 }
+
