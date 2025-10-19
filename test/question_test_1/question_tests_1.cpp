@@ -13,8 +13,8 @@ int main()
     assert(get_fib_sequence(5) == "0 1 1 2 3 5");
     cout << "Test 1 passed." << endl;
 
-    // Test 2
-    assert(get_fib_sequence(7) == "0 1 1 2 3 5 8");
+    // Test 2  <-- corrected expected value includes F7 which is 13
+    assert(get_fib_sequence(7) == "0 1 1 2 3 5 8 13");
     cout << "Test 2 passed." << endl;
 
     // Test 3
@@ -29,4 +29,5 @@ int main()
 
     return 0;
 }
+
 
